@@ -12,7 +12,7 @@ urlpatterns = [
     # url(r'^pic/(?P<country>[a-z\- ]+)/$', views.pic, name = 'pic'),
     # url(r'^pic/(?P<country>[A-Za-z\- ]+)/$', views.pic, name = 'pic'),
     url(r'^pic/$', views.pic, name = 'pic'),
-    url(r'^indicator/$', views.indicator, name = 'indicator')
-    # url(r'^/$', views.compare, name = 'compare')
+    url(r'^indicator/$', views.indicator, name = 'indicator'),
+    url(r'^correlate/$', views.correlate, name = 'compare')
 
 ]

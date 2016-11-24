@@ -1,5 +1,5 @@
 from django import forms
-from .models import Input, Indicator, COUNTRIES, VARIABLES, YEARS
+from .models import Input, Indicator, Correlate, COUNTRIES, VARIABLES, YEARS
 
 class InputForm(forms.ModelForm):
 
@@ -28,3 +28,10 @@ class IndicatorForm(forms.ModelForm):
 
         model = Indicator
         fields = ['country', 'variable']
+
+class CorrelateForm(forms.ModelForm):
+
+    variables = forms.ChoiceField(choices = VARIABLES, required = True,
+                                widget = forms.CheckboxInput())
+
+    year = forms.ChoiceField(choices = YEARS, widget=forms.SelectDateWidget())

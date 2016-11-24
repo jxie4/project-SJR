@@ -1,0 +1,23 @@
+CREATE TABLE db (Index integer,
+                Country text,
+                Year integer,
+                Polity Score real,
+                Employment in agriculture (% of total employment) real,
+                Employment in services (% of total employment) real,
+                Fertility rate, total (births per woman) real,
+                Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate) real,
+              	Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)	real,
+                Labor force participation rate for ages 15-24, total (%) (modeled ILO estimate)	real,
+                Life expectancy at birth, female (years)	real,
+                Life expectancy at birth, male (years)	real,
+                Life expectancy at birth, total (years)	real,
+                Mortality rate, adult, female (per 1,000 female adults)	real,
+                Mortality rate, adult, male (per 1,000 male adults)	real,
+                Mortality rate, under-5 (per 1,000 live births)	real,
+                School enrollment, secondary, female % (gross)	real,
+                School enrollment, secondary, male % (gross)	real,
+                Unemployment, youth female (% of female labor force ages 15-24) (modeled ILO estimate)	real,
+                Unemployment, youth male (% of male labor force ages 15-24) (modeled ILO estimate)	real,
+                Unemployment, youth total (% of total labor force ages 15-24) (modeled ILO estimate) real)
+.mode csv
+.import project_merge_data.csv db

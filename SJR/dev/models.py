@@ -166,7 +166,7 @@ class Input(models.Model):
     name  = models.CharField(max_length=50)
 
 VARIABLES = (
-    ('POLITY2', 'Polity Score'),
+    ('POLITY', 'Polity Score'),
     ('SE.SEC.ENRR.FE', 'School enrollment, secondary, female % (gross)') ,
     ('SP.DYN.LE00.IN', 'Life expectancy at birth, total (years)') ,
     ('SL.TLF.ACTI.1524.ZS', 'Labor force participation rate for ages 15-24, total (%) (modeled ILO estimate)') ,
@@ -211,6 +211,28 @@ YEARS = ((1994, '1994') ,
         (2014, '2014') ,
 
 )
+# YEARS = (' 1994 ' ,
+#         ' 1995 ' ,
+#         ' 1996 ' ,
+#         ' 1997 ' ,
+#         ' 1998 ' ,
+#         ' 1999 ' ,
+#         ' 2000 ' ,
+#         ' 2001 ' ,
+#         ' 2002 ' ,
+#         ' 2003 ' ,
+#         ' 2004 ' ,
+#         ' 2005 ' ,
+#         ' 2006 ' ,
+#         ' 2007 ' ,
+#         ' 2008 ' ,
+#         ' 2009 ' ,
+#         ' 2010 ' ,
+#         ' 2011 ' ,
+#         ' 2012 ' ,
+#         ' 2013 ' ,
+#         ' 2014 ' ,)
+
 
 YEARS_DICT = dict(YEARS)
 
@@ -218,3 +240,8 @@ class Indicator(models.Model):
 
     variable = models.CharField(max_length = 200, choices = VARIABLES)
     country = models.CharField(max_length=30, choices=COUNTRIES)
+
+class Correlate(models.Model):
+
+    variables = models.CharField(max_length = 200, choices = VARIABLES)
+    year = models.CharField(max_length = 4, choices = YEARS)
