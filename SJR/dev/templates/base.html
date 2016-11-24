@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Final Project</title>
+
+  <style>
+  * { font-family: 'Open Sans', sans-serif; }
+
+  body {margin: 0px 10%;}
+
+  h1 {
+    color: black;
+    text-align: center;
+  }
+
+  ul.nav {
+    background-color: #900C3F;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    list-style-type: none;
+  }
+
+  ul.nav li   {
+    display: inline;
+    float:left;
+  }
+
+  ul.nav li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+
+  ul.nav li a.active {
+    color: white;
+    background-color: #900C3F;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  ul.nav li:hover {
+    color: #FFFFFF;
+    background-color: #C70039;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+
+  img{
+    border: 10px;
+    border-style: solid;
+    border-color: transparent;
+    margin: 0px auto;
+
+  }
+
+  table {
+    align: center;
+    border-width: 5px 0px;
+    border-style: solid;
+    border-color: #900C3F;
+    background: #E0DEE0;
+    padding: 0px;
+    border-spacing: 0px;
+    margin: 28px 0px;
+  }
+
+  th {
+    color: white;
+    background-color: #900C3F;
+  }
+
+  th, td {
+    text-align:center;
+    padding: 3px 15px;
+  }
+
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- <img width="20%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/2180px-Harry_Potter_wordmark.svg.png"> -->
+
+<h1><a name="Top" id="Top">Political System and Development</a></h1>
+
+<ul class="nav">
+  <li><a href="#Main" class="active">Main</a></li>
+  <li><a href="#Characters">Characters</a></li>
+  <li><a href="#Fantastic Beasts">Fantastic Beasts</a></li>
+  <li><a href="https://www.pottermore.com/">More at <em>Pottermore</em></a></li>
+</ul>
+
+{% block content %}{% endblock %}
+</body>
+
+</html>
