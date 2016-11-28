@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+h2 {
+  color: grey;
+}
+
+h3 {
+  color: grey;
+}
+</style>
+
+<h1> What is the relationship between political system status and social development? </h1>
+
+<p>
+We are interested in understanding how the political system status interacts with the social development indicators in different countries. We selected a wide range of indicators to see how they correlate with
+political system status.
+
+<p>
+<h3> Indicators </h3>
+Indicators used in our studies mainly come from two datasources, World Development Indicator and Polity IV. For more information, click on datasource in the navigation bar.
+
+<p>
+
+For <b> political system status </b>, we use an indicator <b> polity2 </b> taken from the project Polity IV. This indicator ranges from +10 (strongly democratic) to !10
+(strongly autocratic). The indicator is calculated using a scoring mechanism that measures institutionalized democracy and institutionalized autocracy. They each take into consider
+different perspectives of democracy and autocracy and come up with a score on a scale from 0-10. By subtracting the 2 indicators, we will be able to get <b>polity2</b>.
+
+<p>
+On the other hand, to see how <b> social development </b> changes over time, we've selected 10 indicators from WDI in 3 different dimensions: education,
+employment and health. Here's a full list of indicators used in our analysis.
+
+<ul style="list-style-type:circle">
+  <li><h2> Education </h2></li>
+    <ol type = "I">
+      <li> School enrollment (secondary) by gender </li>
+    </ol>
+  <li><h2> Employment (ILO Model) </h2></li>
+    <ol type = "I">
+      <li> Employment in agriculture (%) </li>
+      <li> Employment in services (%) </li>
+      <li> Labor force participation rate, age 15-24, by gender </li>
+      <li> Unemployment, age 15-24, by gender </li>
+    </ol>
+  <li><h2> Health </h2></li>
+    <ol type = "I">
+      <li> Mortality rate under 5 </li>
+      <li> Mortality rate, adult by gender </li>
+      <li> Life expectancy at birth by gender </li>
+      <li> Survival to age 65 by gender </li>
+      <li> Fertility rate by gender </li>
+    </ol>
+</ul>
+
+We then run analysis using these indicators in the following ways:
+<ul style="list-style-type:circle">
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+The observations are presented in each page.
+
+{% endblock %}

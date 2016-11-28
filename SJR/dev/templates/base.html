@@ -66,21 +66,50 @@
     padding: 0px;
     border-spacing: 0px;
     margin: 28px 0px;
+
   }
 
   th {
     color: white;
     background-color: #900C3F;
+    font-size: 12px;
+    border: 1px solid black;
   }
 
-  th, td {
+  td {
     text-align:center;
-    padding: 3px 15px;
+    font-size: 10px;
+    width: 10px
+    padding: 3px 3px;
+    border: 1px solid black;
   }
 
-
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  .dropdown {
+    display: inline-block;
+    position: absolute;
+  }
+  .dropdown-content {
+    position: absolute;
+    background-color: #900C3F;
+    max-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none;
+  }
+  .dropdown:hover .dropdown-content{
+    display: block;
+    float: left;
+  }
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    float: left;
+  }
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
   </style>
-
 </head>
 
 <body>
@@ -90,10 +119,35 @@
 <h1><a name="Top" id="Top">Political System and Development</a></h1>
 
 <ul class="nav">
+<!--
   <li><a href="#Main" class="active">Main</a></li>
+  <li><a href="#About" class="active">About</a></li>
   <li><a href="#Characters">Characters</a></li>
   <li><a href="#Fantastic Beasts">Fantastic Beasts</a></li>
-  <li><a href="https://www.pottermore.com/">More at <em>Pottermore</em></a></li>
+  <li><a href="https://www.pottermore.com/">More at <em>Pottermore</em></a></li> -->
+  <li class="dropdown">
+    <a href="#" class="dropbtn">About</a>
+    <div class="dropdown-content">
+      <a href="/dev/question">Research Question</a>
+      <a href="/dev/datasetsource">Source Dataset</a>
+      <a href="/dev/team">Our Team</a>
+    </div>
+  </li>
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Key Findings</a>
+    <div class="dropdown-content">
+      <a href="/dev/location">Country Overview</a>
+      <a href="/dev/indicator">Indicator Overview</a>
+      <a href="#">Political System and Development</a>
+    </div>
+  </li>
+    <li class="dropdown">
+    <a href="#" class="dropbtn">Resource</a>
+    <div class="dropdown-content">
+      <a href="http://data.worldbank.org/data-catalog/world-development-indicators">World Bank</a>
+      <a href="http://www.systemicpeace.org/inscrdata.html">Polity IV</a>
+    </div>
+  </li>
 </ul>
 
 {% block content %}{% endblock %}

@@ -25,7 +25,7 @@ SECRET_KEY = '(5s=t4k(erwo9t$z5gzscua=^z(bv!u0rk4mhm=ql)hwl8r$z='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS =['128.135.11.21','localhost','california.cs.uchicago,edu']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dev.apps.DevConfig',
+    # 'easy_maps',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
+#Google map setting
+EASY_MAPS_GOOGLE_MAPS_API_KEY = 'AIzaSyDP_q3XOLJgXjHG13Ka9RqCSR7T2jnN3uA'
+EASY_MAPS_CENTER = (-41.3, 32)

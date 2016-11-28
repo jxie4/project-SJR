@@ -15,6 +15,12 @@ from django.views.generic import FormView
 from .forms import InputForm, IndicatorForm, CorrelateForm
 from .models import COUNTRIES_DICT, VARIABLES_DICT, YEARS_DICT
 
+def team(request):
+    return render(request,'OurTeam.html')
+def datasetsource(request):
+    return render(request,'Dataset_Sources.html')
+def question(request):
+    return render(request,'question.html')
 def location(request, country = None):
     country = request.GET.get('country', '')
     if not country: country = request.POST.get('country', 'china')
@@ -31,7 +37,7 @@ def location(request, country = None):
     table = df.to_html(float_format = "%.3f", classes = "table table-striped", index_names = False)
     table = table.replace('border="1"','border="0"')
     table = table.replace('style="text-align: right;"', "") # control this in css, not pandas.
-
+    print(table)
     params = {'form_action' : reverse_lazy('dev:location'),
                 'form_method' : 'get',
                 'form' : InputForm({'country' : country}),
@@ -98,7 +104,7 @@ def form(request, country = None):
 
     table = df.to_html(float_format = "%.3f", classes = "table table-striped", index_names = False)
     table = table.replace('border="1"','border="0"')
-    table = table.replace('style="text-align: right;"', "") # control this in css, not pandas.
+    table = table.replace('style="text-align: left;"', "") # control this in css, not pandas.
 
     params = {'form_action' : reverse_lazy('dev:form'),
                 'form_method' : 'get',
@@ -129,7 +135,7 @@ def indicator(request, country = None, variable = None):
 
     table = df.to_html(float_format = "%.3f", classes = "table table-striped", index_names = False)
     table = table.replace('border="1"','border="0"')
-    table = table.replace('style="text-align: right;"', "") # control this in css, not pandas.
+    table = table.replace('style="text-align: left;"', "") # control this in css, not pandas.
 
     params = {'form_action' : reverse_lazy('dev:indicator'),
                 'form_method' : 'get',

@@ -13,6 +13,9 @@ urlpatterns = [
     # url(r'^pic/(?P<country>[A-Za-z\- ]+)/$', views.pic, name = 'pic'),
     url(r'^pic/$', views.pic, name = 'pic'),
     url(r'^indicator/$', views.indicator, name = 'indicator'),
-    url(r'^correlate/$', views.correlate, name = 'compare')
+    url(r'^correlate/$', views.correlate, name = 'compare'),
 
+    url(r'^team', views.team, name = 'team'),
+    url(r'^question', views.question, name = 'team'),
+    url(r'^datasetsource', views.datasetsource, name = 'datasetsource')
 ]
