@@ -1,6 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
+<style>
+table {
+  align: center;
+  border-width: 5px 0px;
+  border-style: solid;
+  border-color: #900C3F;
+  background: #E0DEE0;
+  padding: 0px;
+  border-spacing: 0px;
+  margin: 28px 0px;
+
+}
+
+th {
+  color: white;
+  background-color: #900C3F;
+  font-size: 12px;
+
+}
+
+td {
+  text-align:center;
+  font-size: 10px;
+  width: 10px;
+  padding: 3px 3px;
+  border: 1px solid white;
+}
+</style>
+
 <br>
 <form action="{{ form_action }}"
       method="{{ form_method }}">
@@ -11,9 +40,6 @@
   {{ form.as_p }}
 </form>
 
-{% if country %}
-    {{ country }}
-{% endif %}
 <p>
 <img style="float:right" src='{{ pic_source }}' width=40% />
 {{ html_table | safe}}

@@ -168,22 +168,17 @@ class Input(models.Model):
 VARIABLES = (
     ('POLITY', 'Polity Score'),
     ('SE.SEC.ENRR.FE', 'School enrollment, secondary, female % (gross)') ,
-    ('SP.DYN.LE00.IN', 'Life expectancy at birth, total (years)') ,
-    ('SL.TLF.ACTI.1524.ZS', 'Labor force participation rate for ages 15-24, total (%) (modeled ILO estimate)') ,
-    ('SP.DYN.LE00.FE.IN', 'Life expectancy at birth, female (years)') ,
-    ('SP.DYN.AMRT.MA', 'Mortality rate, adult, male (per 1,000 male adults)') ,
-    ('SL.SRV.EMPL.ZS', 'Employment in services (% of total employment)') ,
-    ('SL.UEM.1524.FE.ZS', 'Unemployment, youth female (% of female labor force ages 15-24) (modeled ILO estimate)') ,
-    ('SL.AGR.EMPL.ZS', 'Employment in agriculture (% of total employment)') ,
-    ('SL.TLF.ACTI.1524.MA.ZS', 'Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)') ,
-    ('SP.DYN.LE00.MA.IN', 'Life expectancy at birth, male (years)') ,
     ('SE.SEC.ENRR.MA', 'School enrollment, secondary, male % (gross)') ,
-    ('SL.UEM.1524.MA.ZS', 'Unemployment, youth male (% of male labor force ages 15-24) (modeled ILO estimate)') ,
-    ('SL.TLF.ACTI.1524.FE.ZS', 'Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)') ,
+    ('SL.TLF.ACTI.1524.ZS', 'Labor force participation rate for ages 15-24, total (%) (modeled ILO estimate)') ,
+    ('SL.SRV.EMPL.ZS', 'Employment in services (% of total employment)') ,
+    ('SL.AGR.EMPL.ZS', 'Employment in agriculture (% of total employment)') ,
     ('SL.UEM.1524.ZS', 'Unemployment, youth total (% of total labor force ages 15-24) (modeled ILO estimate)') ,
     ('SP.DYN.TFRT.IN', 'Fertility rate, total (births per woman)') ,
     ('SH.DYN.MORT', 'Mortality rate, under-5 (per 1,000 live births)') ,
     ('SP.DYN.AMRT.FE', 'Mortality rate, adult, female (per 1,000 female adults)') ,
+    ('SP.DYN.AMRT.MA', 'Mortality rate, adult, male (per 1,000 male adults)') ,
+    ('SP.DYN.LE00.IN', 'Life expectancy at birth, total (years)') ,
+
 )
 
 VARIABLES_DICT = dict(VARIABLES)
@@ -211,28 +206,6 @@ YEARS = ((1994, '1994') ,
         (2014, '2014') ,
 
 )
-# YEARS = (' 1994 ' ,
-#         ' 1995 ' ,
-#         ' 1996 ' ,
-#         ' 1997 ' ,
-#         ' 1998 ' ,
-#         ' 1999 ' ,
-#         ' 2000 ' ,
-#         ' 2001 ' ,
-#         ' 2002 ' ,
-#         ' 2003 ' ,
-#         ' 2004 ' ,
-#         ' 2005 ' ,
-#         ' 2006 ' ,
-#         ' 2007 ' ,
-#         ' 2008 ' ,
-#         ' 2009 ' ,
-#         ' 2010 ' ,
-#         ' 2011 ' ,
-#         ' 2012 ' ,
-#         ' 2013 ' ,
-#         ' 2014 ' ,)
-
 
 YEARS_DICT = dict(YEARS)
 
@@ -243,5 +216,5 @@ class Indicator(models.Model):
 
 class Correlate(models.Model):
 
-    variables = models.CharField(max_length = 200, choices = VARIABLES)
-    year = models.CharField(max_length = 4, choices = YEARS)
+    variable = models.CharField(max_length = 200, choices = VARIABLES)
+    # year = models.CharField(max_length = 4, choices = YEARS)

@@ -8,22 +8,24 @@
     {% csrf_token %}
   {% endif %}
 
-  {{ form.as_p }}
-<input type="submit" value="Submit">
+  Social Development Indicator: {{ form.variable }}
+  <!-- <input type="submit" value="Submit"> -->
 </form>
 
 <!-- </form> -->
-
-{% if variables %}
-    Indicators: {{ variables }}
-{% endif %}
 <br>
-{% if year %}
-    Year: {{ year }}
-{% endif %}
-<p>
-<img style="float:right" src='{{ pic_source }}' width=40% />
-{{ html_table | safe}}
+<img style="float:left" src='{{ pic_source }}' />
+<!-- <table>
+<tr><th>Dependent Variable</th> <th>Independent Variable</th> </tr>
+<tr><td>{{ variable }}</td>     <td>Polity Score</td></tr>
+<tr><th>Slope</th>              <th>Intercept</th></tr>
+<tr><td>{{ slope }}</td>        <td>{{ intercept}}</td></tr>
+<tr><th>R-squared</th>          <th>P-value</th></tr>
+<tr><td>{{ r_squared }}</td>    <td>{{ p_value }}</td></tr>
+<tr><th>Standard Error</th></tr>
+<tr><td>{{ std_err }}</td></tr>
+</table> -->
+<!-- {{ html_table | safe}} -->
 </p>
 
 {% endblock %}

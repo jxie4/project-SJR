@@ -16,9 +16,6 @@ class InputForm(forms.ModelForm):
 
 class IndicatorForm(forms.ModelForm):
 
-    # attrs = {'class ' : 'form-nav-control',
-    #          'onchange ' : 'this.form.submit()'}
-
     variable = forms.ChoiceField(choices = VARIABLES, required = True,
                                widget = forms.Select())
 
@@ -31,7 +28,15 @@ class IndicatorForm(forms.ModelForm):
 
 class CorrelateForm(forms.ModelForm):
 
-    variables = forms.ChoiceField(choices = VARIABLES, required = True,
-                                widget = forms.CheckboxInput())
+    attrs = {'class ' : 'form-nav-control',
+             'onchange ' : 'this.form.submit()'}
 
-    year = forms.ChoiceField(choices = YEARS, widget=forms.SelectDateWidget())
+    variable = forms.ChoiceField(choices = VARIABLES, required = True,
+                                widget = forms.Select(attrs = attrs))
+
+    # year = forms.ChoiceField(choices = YEARS, widget=forms.SelectDateWidget())
+
+    class Meta:
+
+        model = Correlate
+        fields = ['variable']
