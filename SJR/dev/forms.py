@@ -1,5 +1,5 @@
 from django import forms
-from .models import Input, Indicator, Correlate, COUNTRIES, VARIABLES, YEARS
+from .models import Input, Indicator, Correlate, COUNTRIES, VARIABLES, SOCIAL_INDICATORS
 
 class InputForm(forms.ModelForm):
 
@@ -31,10 +31,8 @@ class CorrelateForm(forms.ModelForm):
     attrs = {'class ' : 'form-nav-control',
              'onchange ' : 'this.form.submit()'}
 
-    variable = forms.ChoiceField(choices = VARIABLES, required = True,
+    variable = forms.ChoiceField(choices = SOCIAL_INDICATORS, required = True,
                                 widget = forms.Select(attrs = attrs))
-
-    # year = forms.ChoiceField(choices = YEARS, widget=forms.SelectDateWidget())
 
     class Meta:
 

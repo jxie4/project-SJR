@@ -4,8 +4,8 @@ from . import views
 app_name = 'dev'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^location/(?P<country>[A-Za-z\- ]+)/$', views.location, name = 'location'),
-    url(r'^location/(?P<country>[a-z\- ]+)/$', views.location, name = 'location'),
+    # url(r'^location/(?P<country>[A-Za-z\- ]+)/$', views.location, name = 'location'),
+    # url(r'^location/(?P<country>[a-z\- ]+)/$', views.location, name = 'location'),
     url(r'^location/$', views.location, name = 'location'),
     url(r'^pic/(?P<country>[a-z,\- ]+)\+(?P<variable>[A-Z0-9.]+)/$', views.pic, name = 'pic'),
     url(r'^pic/$', views.pic, name = 'pic'),
