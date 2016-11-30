@@ -2,7 +2,7 @@
 
 Our project studies the relationship between politcal system status and social development.
 
-##  About
+#  About
   The 3 tabs introduces our research question, the data sources and the team members.
   
   Research Question
