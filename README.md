@@ -26,7 +26,7 @@ The 3 tabs introduces our research question, the data sources and the team membe
 This page explains our research question in more details. This page explains the motives behind our research question. It includes all the indicators used in our study and explains how these indicators are selected. We also state the indicator used for political system status and explain the mechanism behind this score.
 
 ```
-[Named Link] http://127.0.0.1:8000/dev/question
+http://127.0.0.1:8000/dev/question/
 ```
 
 
