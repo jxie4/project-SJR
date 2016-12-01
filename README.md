@@ -28,7 +28,7 @@ This page explains our research question in more details. This page explains the
 An introduction to the two data sources and the providers used in our research: World Development Indicator by the world bank & Polity IV by Integrated Network for Societal Conflict Research
 
 ### Our Team
-    	A basic introduction of the 3 team members: Shilin Liu, Juanyou Xie & Richard Han
+A basic introduction of the 3 team members: Shilin Liu, Juanyou Xie & Richard Han
 
 ## Key Findings
 	Our data collected were presented in three different ways: country overview, indicator overview & political system & social development.
