@@ -95,7 +95,7 @@ def pic(request, country, variable):
 def indicator(request, country = None, variable = None):
 
     country = request.GET.getlist('country')
-    if not country: country = [request.POST.get('country', 'united states')]
+    if not country: country = ['china', 'japan']
     variable = request.GET.get('variable', 'POLITY')
     # if not variable: variable = request.POST.get('variable', 'SE.SEC.ENRR.FE')
 
