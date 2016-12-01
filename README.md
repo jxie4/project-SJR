@@ -6,7 +6,7 @@ Our project studies the relationship between politcal system status and social d
 # How to use this website
 1. Open 
 2. Open https://github.com/jxie4/project-SJR
-3. Type in the code _ git clone git@github.com:jxie4/project-SJR _
+3. Type in the code _git clone git@github.com:jxie4/project-SJR_
 4. cd 
 
 
