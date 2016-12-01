@@ -4,11 +4,13 @@ Our project studies the relationship between politcal system status and social d
 
 
 # How to use this website
-1. Open 
+1. Open a directory that you want to save the file to
 2. Open https://github.com/jxie4/project-SJR
-3. Type in the code _git clone git@github.com:jxie4/project-SJR_
-4. cd 
-
+3. Type the code ___git clone git@github.com:jxie4/project-SJR___ into _terminal_; this will download the final project-SJR
+4. Move towards the directory in the file ___SJR___
+5. Type the code ___python manage.py runserver___ into _terminal_
+6. Load the page ___http://127.0.0.1:8000/dev/___
+7. For the more detailed links for each page, see the explanation below
 
 #  About
   The 3 tabs introduces our research question, the data sources and the team members.
