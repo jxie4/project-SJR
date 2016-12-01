@@ -5,21 +5,20 @@ Our project studies the relationship between politcal system status and social d
 
 How to open our website
 ======
-1. Open a directory that you want to save the file to, e.g. Desktop
-2. Open https://github.com/jxie4/project-SJR
+1. Open a directory where you want to save the files, e.g. Desktop etc.
+2. Open `https://github.com/jxie4/project-SJR`
 3. Type `git clone git@github.com:jxie4/project-SJR` into _terminal_; this will download the file "project-SJR"
 4. Move towards the directory in the file ___SJR___
 5. Type `python manage.py runserver` into _terminal_
-6. Load the page http://127.0.0.1:8000/dev/
-7. For the more detailed links for each page, see the guide beneath
+6. Load the page `http://127.0.0.1:8000/dev/`, this will lead you to our starting page
+7. For the access to each page, see the guide beneath
 
 Manual Guide
 ======
-Once the server is running, click on the title and you will be directed to the page you are interested.
+Once the server is running, click on the interested title and you will be directed to the page you're looking for.
 
 
 ## About
-The 3 tabs introduces our research question, the data sources and the team members.
 
 - [x] ___[Research Question] (http://127.0.0.1:8000/dev/question/)___
 
