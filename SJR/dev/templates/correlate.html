@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<table style="width:100%">
+  <tr>
+    <th width=18%><img style = "float:center" src="https://pbs.twimg.com/media/CyflPLYUUAAd8Qt.jpg" /></th>
+  </tr>
+</table>
+
+<p>
+
 <br>
 <form action="{{ form_action }}"
       method="{{ form_method }}">
@@ -8,13 +17,12 @@
     {% csrf_token %}
   {% endif %}
 
-  Social Development Indicator: {{ form.variable }}
+ <p style="text-align:center">Social Development Indicator: {{ form.variable }}</p>
   <!-- <input type="submit" value="Submit"> -->
 </form>
 
-<!-- </form> -->
 <br>
-<img style="float:left" src='{{ pic_source }}' />
+<img style="float:center" src='{{ pic_source }}' />
 <!-- <table>
 <tr><th>Dependent Variable</th> <th>Independent Variable</th> </tr>
 <tr><td>{{ variable }}</td>     <td>Polity Score</td></tr>
