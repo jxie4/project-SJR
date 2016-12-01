@@ -19,13 +19,13 @@ Manual Guide
 ## About
   The 3 tabs introduces our research question, the data sources and the team members.
 
-- [x] Research Question
+- [x] ___Research Question___
 
+This page explains our research question in more details. This page explains the motives behind our research question. It includes all the indicators used in our study and explains how these indicators are selected. We also state the indicator used for political system status and explain the mechanism behind this score.
 
-    This page explains our research question in more details. This page explains the motives behind our research question. It includes all the indicators used in our study and explains how these indicators are selected. We also state the indicator used for political system status and explain the mechanism behind this score.
+- [x] Dataset sources
 
-### Dataset sources
-	An introduction to the two data sources and the providers used in our research: World Development Indicator by the world bank & Polity IV by Integrated Network for Societal Conflict Research
+An introduction to the two data sources and the providers used in our research: World Development Indicator by the world bank & Polity IV by Integrated Network for Societal Conflict Research
 
 ### Our Team
     	A basic introduction of the 3 team members: Shilin Liu, Juanyou Xie & Richard Han
