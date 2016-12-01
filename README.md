@@ -6,15 +6,9 @@ Our project studies the relationship between politcal system status and social d
 # How to open our website
 1. Open a directory that you want to save the file to, e.g. Desktop
 2. Open https://github.com/jxie4/project-SJR
-3. Type the following code into _terminal_; this will download the final project-SJR
-```
-git clone git@github.com:jxie4/project-SJR
-```
+3. Type `git clone git@github.com:jxie4/project-SJR` into _terminal_; this will download the file "project-SJR"
 4. Move towards the directory in the file ___SJR___
-5. Type the following code into _terminal_
-```
-python manage.py runserver
-```
+5. Type `python manage.py runserver` into _terminal_
 6. Load the page ___http://127.0.0.1:8000/dev/___
 7. For the more detailed links for each page, see the guide beneath
 
@@ -23,7 +17,7 @@ python manage.py runserver
 ## About
   The 3 tabs introduces our research question, the data sources and the team members.
   
-###Research Question 
+- [x] Research Question 
     	This page explains our research question in more details. This page explains the motives behind our research question. It includes all the indicators used in our study and explains how these indicators are selected. We also state the indicator used for political system status and explain the mechanism behind this score.
 
 ###Dataset sources 
@@ -32,7 +26,7 @@ python manage.py runserver
 ###Our Team
     	A basic introduction of the 3 team members: Shilin Liu, Juanyou Xie & Richard Han
 
-#Key Findings
+## Key Findings
 	Our data collected were presented in three different ways: country overview, indicator overview & political system & social development. 
 	
   ###   Country overview
