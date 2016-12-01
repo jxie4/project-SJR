@@ -3,7 +3,8 @@
 Our project studies the relationship between politcal system status and social development.
 
 
-# How to open our website
+How to open our website
+======
 1. Open a directory that you want to save the file to, e.g. Desktop
 2. Open https://github.com/jxie4/project-SJR
 3. Type `git clone git@github.com:jxie4/project-SJR` into _terminal_; this will download the file "project-SJR"
@@ -12,12 +13,13 @@ Our project studies the relationship between politcal system status and social d
 6. Load the page ___http://127.0.0.1:8000/dev/___
 7. For the more detailed links for each page, see the guide beneath
 
-# Manual Guide
+Manual Guide
+======
 
-## About
+# About
   The 3 tabs introduces our research question, the data sources and the team members.
   
-- [x] ### Research Question ###
+- [x] ## Research Question
     This page explains our research question in more details. This page explains the motives behind our research question. It includes all the indicators used in our study and explains how these indicators are selected. We also state the indicator used for political system status and explain the mechanism behind this score.
 
 ###Dataset sources 
