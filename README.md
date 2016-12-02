@@ -8,7 +8,7 @@ How to open our website
 Welcome to Shilin, Joyce and Richard's baby project! Here is how you access it:
 
 1. Open a directory where you want to save the files, e.g. Desktop, in _terminal_.
-2. Enter the code `git clone git@github.com:jxie4/project-SJR` into _terminal_; this will download the repository "project-SJR"
+2. Enter the code `git clone git@github.com:jxie4/project-SJR` into _terminal_; this will download the repository "project-SJR".
 3. Move towards the directory in the file ___SJR___: `cd project-SJR/SJR`
 4. Enter the code `python manage.py runserver` into _terminal_.
 5. Load the page http://127.0.0.1:8000/dev/, this will lead you to our starting page!
