@@ -23,7 +23,7 @@ Once the server is running on _terminal_, click on the interested title and you 
 
 - [x] __[Research Question] (http://127.0.0.1:8000/dev/question/)__
 
-This page explains our research question in more details and the motives behind our research question. It lists all the indicators used in our study and explains how these indicators are selected. We also state the indicator used for political system status and explain the mechanism behind this score.
+This page explains our research question in more details. It lists all the indicators used in our study and explains how these indicators are selected. We also state the indicator used for political system status and explain the mechanism behind this score.
 
 ```
 http://127.0.0.1:8000/dev/question/
