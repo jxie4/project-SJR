@@ -42,13 +42,10 @@ def location(request, country = None):
         df = df[df.index.str.lower() == country]
 
     table = df.to_html(float_format = "%.3f", classes = "table table-striped", index_names = False)
-    # table = table.replace('border="1"','border="0"')
-    # table = table.replace('style="text-align: right;"', "") # control this in css, not pandas.
 
     params = {'form_action' : reverse_lazy('dev:location'),
                 'form_method' : 'get',
                 'form' : InputForm({'country' : country}),
-                # 'country' : COUNTRIES_DICT[country],
                 'html_table': table,}
 
     return render(request, 'location.html', params)
@@ -110,8 +107,6 @@ def indicator(request, country = None, variable = None):
         df.set_index(['Country'], inplace = True)
 
     table = df.to_html(float_format = "%.3f", classes = "table table-striped", index_names = False)
-    # table = table.replace('border="1"','border="0"')
-    # table = table.replace('style="text-align: left;"', "") # control this in css, not pandas.
 
     countries = ",".join(country)
 
@@ -119,8 +114,6 @@ def indicator(request, country = None, variable = None):
                 'form_method' : 'get',
                 'form' : IndicatorForm({'country' : country,
                                         'variable': variable}),
-                # 'country' : COUNTRIES_DICT.get(country[i] for i in range(len(country))),
-                # 'variable' : VARIABLES_DICT[variable],
                 'html_table': table,
                 'pic_source': reverse_lazy('dev:pic', kwargs = {'country' : countries, 'variable' : variable})}
 
@@ -140,7 +133,6 @@ def scatter(request, variable):
 
     if variable:
         df = df[['Country', 'Year', indicator1, indicator2]]
-        # df.set_index(['Country'], inplace = True)
 
     plt.figure() # needed, to avoid adding curves in plot
 
@@ -152,7 +144,7 @@ def scatter(request, variable):
 
     # this is where the color is used.
     try: plt.savefig(figfile, format = 'png')
-    except ValueError: raise Http404("No such country")
+    except ValueError: raise Http404("No such variable")
 
     figfile.seek(0) # rewind to beginning of file
     return HttpResponse(figfile.read(), content_type="image/png")
@@ -173,30 +165,9 @@ def correlate(request, variable = None):
 
     df = pd.read_csv(filename)
 
-    # if variable:
-    #     df = df[['Country', 'Year', indicator1, indicator2]]
-    #     df.set_index(['Country'], inplace = True)
-
-    # X = df[indicator1]
-    # Y = df[indicator2]
-    # mask = ~np.isnan(X) & ~np.isnan(Y)
-    #
-    # slope, intercept, r_value, p_value, std_err = stats.linregress(X[mask], Y[mask])
-    # r_squared = r_value ** 2
-    # table = df.to_html(float_format = "%.3f", classes = "table table-striped", index_names = False)
-    # table = table.replace('border="1"','border="0"')
-    # table = table.replace('style="text-align: right;"', "") # control this in css, not pandas.
-
     params = {'form_action' : reverse_lazy('dev:compare'),
                 'form_method' : 'get',
                 'form' : CorrelateForm({'variable': variable}),
-                # 'variable' : VARIABLES_DICT[variable],
-                # 'slope': slope,
-                # 'intercept' : intercept,
-                # 'r_squared': r_squared,
-                # 'p_value': p_value,
-                # 'std_err': std_err,
-                # 'html_table': table,
                 'pic_source': reverse_lazy('dev:scatter', kwargs = {'variable' : variable})}
 
     return render(request, 'correlate.html', params)
